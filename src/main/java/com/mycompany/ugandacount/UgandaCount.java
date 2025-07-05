@@ -1,6 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
 
 package com.mycompany.ugandacount;
 
@@ -50,7 +47,7 @@ public class UgandaCount {
             
             // Validate input
             if (description.isEmpty()) {
-                System.out.println("⚠️  No book description entered. Please try again.");
+                System.out.println("  No book description entered. Please try again.");
                 return;
             }
             
@@ -61,7 +58,7 @@ public class UgandaCount {
             displayResults(description, ugandaCount);
             
         } catch (Exception e) {
-            System.err.println("❌ Error occurred: " + e.getMessage());
+            System.err.println(" Error occurred: " + e.getMessage());
         }
     }
     
@@ -104,14 +101,14 @@ public class UgandaCount {
         System.out.println("=".repeat(60));
         
         // Display book description with character/word count
-        System.out.println("📖 BOOK DESCRIPTION:");
+        System.out.println(" BOOK DESCRIPTION:");
         System.out.println("-".repeat(30));
         System.out.println(description);
         System.out.println("-".repeat(30));
         
         // Display statistics
         String[] words = description.split("\\s+");
-        System.out.printf("📊 DESCRIPTION STATISTICS:%n");
+        System.out.printf("DESCRIPTION STATISTICS:%n");
         System.out.printf("   Total Characters: %d%n", description.length());
         System.out.printf("   Total Words: %d%n", words.length);
         System.out.printf("   Total Sentences: %d%n", countSentences(description));
@@ -122,9 +119,9 @@ public class UgandaCount {
         
         // Provide contextual feedback
         switch (count) {
-            case 0 -> System.out.println("   ℹ️  The word 'Uganda' was not found in this description.");
-            case 1 -> System.out.println("   ✅ The word 'Uganda' appears once in this description.");
-            default -> System.out.printf("   ✅ The word 'Uganda' appears multiple times (%d) in this description.%n", count);
+            case 0 -> System.out.println("    The word 'Uganda' was not found in this description.");
+            case 1 -> System.out.println("    The word 'Uganda' appears once in this description.");
+            default -> System.out.printf("    The word 'Uganda' appears multiple times (%d) in this description.%n", count);
         }
         
         // Show highlighted text (for verification)
